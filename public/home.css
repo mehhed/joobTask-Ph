@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+.body {
+  font-family: "Mooli", sans-serif;
+}
+.animation-bounce {
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.fade-in-element {
+  opacity: 0; /* Start with 0 opacity (invisible) */
+  animation: fade-in 2s forwards;
+  transform: translateY(50px);
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1; /* Fade in to 100% opacity */
+    transform: translateY(0px);
+  }
+}
+
+.custom-Shadow {
+  box-shadow: 0px 0px 15px #03ebff;
+}
+
+.changeable-name::after {
+  content: "";
+  height: 105%;
+  width: 103%;
+  border-left: 2px solid #03ebff;
+  background: #20232d;
+  position: absolute;
+  top: 0%;
+  right: -3%;
+  animation: hideName infinite 4s;
+}
+
+@keyframes hideName {
+  0%,
+  100% {
+    width: 103%;
+  }
+  50% {
+    width: 0%;
+  }
+}
+
+.myName {
+  background-image: linear-gradient(90deg, white, #03ebff, white);
+  background-clip: text;
+  color: transparent;
+}
